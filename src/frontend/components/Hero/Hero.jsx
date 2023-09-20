@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="white-bcg">
       <div className={`container ${styles.hero}`}>
-        <article className={styles.cotent}>
+        <article className={styles.content}>
           <h1>
             Isnt this beautifull? <i>I know it IS</i>
           </h1>
@@ -22,7 +22,7 @@ export default function Hero() {
           </Link>
         </article>
         <article className={styles.imageContainer}>
-          <img src={image} alt="" />
+          <img src={image} alt="" className={styles.image} />
         </article>
       </div>
     </section>
