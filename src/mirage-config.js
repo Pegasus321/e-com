@@ -1,6 +1,9 @@
 import { RestSerializer, Server, Model } from "miragejs";
 
 import { products } from "./backend/db/products";
+import { categories } from "./backend/db/categories";
+import { getAllProducts } from "./backend/controllers/ProductsController";
+import { getAllCategories } from "./backend/controllers/CategoriesController";
 
 export default function myServer({ environment = "development" }) {
   return new Server({
@@ -19,12 +22,20 @@ export default function myServer({ environment = "development" }) {
       products.forEach((item) => {
         server.create("product", { ...item });
       });
+
+      categories.forEach((item) => {
+        server.create("category", { ...item });
+      });
     },
     routes() {
       this.namespace = "api";
-      this.get("/products", (schema) => {
-        return schema.products.all();
-      });
+
+      //publice routes
+      //products routes
+      this.get("/products", getAllProducts.bind(this));
+
+      //categories routes
+      this.get("/categories", getAllCategories.bind(this));
     },
   });
 }

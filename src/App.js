@@ -8,6 +8,7 @@ import Loader from "./frontend/components/Loader";
 
 import ProductListingPage from "./frontend/pages/ProductListingPage/ProductListingPage";
 import Home from "./frontend/pages/Home";
+import SingleProductPage from "./frontend/pages/SingleProductPage/SingleProductPage";
 const SharedLayout = lazy(() => import("./frontend/pages/SharedLayout"));
 
 const Fallback = () => {
@@ -45,6 +46,14 @@ function App() {
               element={
                 <Suspense fallback={<Fallback />}>
                   <ProductListingPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="products/:productId"
+              element={
+                <Suspense fallback={<Fallback />}>
+                  <SingleProductPage />
                 </Suspense>
               }
             />

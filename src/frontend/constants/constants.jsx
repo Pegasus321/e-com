@@ -1,5 +1,19 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
+export const status_200 = {
+  status: 200,
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
+export const status_500 = {
+  status: 500,
+  headers: {
+    "Content-Type": "application/json",
+  },
+};
+
 export const FOOTER_LINKS = [
   {
     id: 1,
