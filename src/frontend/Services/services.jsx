@@ -28,3 +28,16 @@ export const getAllProductsWithCategories = async () => {
 
   return { products, categories };
 };
+
+export const getSingleProduct = async (productId) => {
+  const {
+    status,
+    data: { product },
+  } = await axios.get(`/api/products/${productId}`);
+  if (!product) {
+    throw new Error("Error: Product Not Found");
+  }
+  if (status === 200 || status === 201) {
+    return product;
+  }
+};

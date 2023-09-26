@@ -172,3 +172,14 @@ a,
 button {
   line-height: 1.15;
 }
+
+.half-page {
+  min-height: calc(100vh-13.8rem);
+  padding: 2.5rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .half-page {
+    min-height: calc(100vh-13.75rem);
+  }
+}

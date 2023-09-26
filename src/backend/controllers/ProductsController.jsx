@@ -9,13 +9,15 @@ export const getAllProducts = function () {
 export const getProductHandler = function (schema, request) {
   try {
     return new Response(
-      JSON.stringify(schema.products.findby({ id: request.params.productId })),
-      status_200
+      status_200,
+      {},
+      schema.products.findBy({ _id: request.params.productId })
     );
   } catch (err) {
     return new Response(
-      JSON.stringify({ error: err.message || "An error occuered" }),
-      status_500
+      status_500,
+      {},
+      { error: err.message || "An error occuered" }
     );
   }
 };
