@@ -19,6 +19,21 @@
   width: 100%;
 }
 
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+  margin: 0.5rem 0;
+}
+.row span {
+  font-weight: 600;
+  letter-spacing: var(--letterSpacing);
+  font-size: 1rem;
+}
+.row p {
+  margin: 0;
+  letter-spacing: var(--letterSpacing);
+}
 @media screen and (min-width: 768px) {
   .page {
     grid-template-columns: 20rem 1fr;

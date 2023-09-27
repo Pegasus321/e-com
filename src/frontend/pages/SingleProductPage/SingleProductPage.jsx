@@ -47,8 +47,44 @@ export default function SingleProductPage() {
         <img src={image} alt={name} />
       </div>
       <div className={styles.content}>
-        <h3>{name}</h3>
-        <div>{price}</div>
+        <h3 className="">{name}</h3>
+
+        <div className={styles.price}>{price}</div>
+
+        <p className="styles.description">{description}</p>
+
+        <div className={styles.row}>
+          <span>Available:</span>
+          <p></p>
+        </div>
+
+        <div className={styles.row}>
+          <span>Shipping Available:</span>
+          <p>yes</p>
+        </div>
+
+        <div className={styles.row}>
+          <span>Category:</span>
+          <p>{category}</p>
+        </div>
+
+        <div className={styles.row}>
+          <span>Company:</span>
+          <p>{company}</p>
+        </div>
+
+        <div className={styles.row}>
+          <span>Colors:</span>
+        </div>
+        <div className={styles.row}>
+          <span>In stock:</span>
+          <p>yes</p>
+        </div>
+
+        <hr />
+        <div className="btn-container">
+          <button>a</button>
+        </div>
       </div>
     </main>
   );
