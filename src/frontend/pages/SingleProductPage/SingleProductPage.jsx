@@ -83,7 +83,7 @@ export default function SingleProductPage() {
 
         <hr />
         <div className="btn-container">
-          <button>a</button>
+          <button>Add to cart</button>
         </div>
       </div>
     </main>
