@@ -1,0 +1,6 @@
+.imageContainer {
+  height: 10rem;
+}
+.imageContainer img {
+  height: 100%;
+}
