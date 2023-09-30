@@ -1,0 +1,11 @@
+.productCenter {
+  display: grid;
+  grid-template-columns: 1frs;
+  place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .productCenter {
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+}

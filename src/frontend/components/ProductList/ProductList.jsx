@@ -10,7 +10,7 @@ export default function ProductList() {
   console.log(filteredProducts);
 
   return (
-    <div>
+    <div className={styles.productCenter}>
       {filteredProducts.map((item) => (
         <ProductCard key={item._id} product={item} />
       ))}
