@@ -7,6 +7,7 @@ export default function ProductCard({ product }) {
     <article className={styles.productStyle}>
       <div className={styles.imageContainer}>
         <Link to={`/products/${product._id}`}>
+          <p>{product.naem}</p>
           <img src={product.image} alt={product.name} />
         </Link>
       </div>
