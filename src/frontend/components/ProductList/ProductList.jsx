@@ -11,6 +11,12 @@ export default function ProductList() {
 
   return (
     <div className={styles.productCenter}>
+      <header>
+        <p>Product Found</p>
+        <p>
+          Page 1 of 
+        </p>
+      </header>
       {filteredProducts.map((item) => (
         <ProductCard key={item._id} product={item} />
       ))}
