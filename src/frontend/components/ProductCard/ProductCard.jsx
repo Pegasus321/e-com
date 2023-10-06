@@ -11,6 +11,7 @@ export default function ProductCard({ product }) {
           <img src={product.image} alt={product.name} />
         </Link>
       </div>
+      <button></button>
     </article>
   );
 }
